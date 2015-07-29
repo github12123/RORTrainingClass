@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>image</th>
     <th>Description</th>
     <th></th>
     <th></th>
@@ -10,6 +11,7 @@
 
 <% @pins.each do |pin| %>
   <tr>
+    <td><%= image_tag pin.image.url (:medium) %></td>
     <td><%= pin.description %></td>
     <td><%= link_to 'Show', pin %></td>
     <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
